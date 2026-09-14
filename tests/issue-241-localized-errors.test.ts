@@ -351,7 +351,7 @@ async function run(): Promise<void> {
           { className: 'mt-3 flex gap-2' },
           React.createElement(
             'button',
-            { className: 'rounded bg-blue-600 px-3 py-2 text-sm font-medium text-white' },
+            { className: 'rounded bg-amber-600 px-3 py-2 text-sm font-medium text-white' },
             t('support.getHelp', lang),
           ),
           React.createElement(

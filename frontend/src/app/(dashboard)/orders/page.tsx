@@ -54,7 +54,7 @@ type OrdersKey = keyof AppConfig['Messages']['orders'];
 
 const itemStatusConfig: Record<OrderItem['status'], { dot: string; color: string; labelKey: OrdersKey }> = {
   pending: { dot: 'bg-yellow-400', color: 'text-yellow-700 dark:text-yellow-300', labelKey: 'itemStatusWaiting' },
-  preparing: { dot: 'bg-blue-500 dark:bg-blue-400', color: 'text-blue-700 dark:text-blue-300', labelKey: 'itemStatusPreparing' },
+  preparing: { dot: 'bg-amber-500 dark:bg-amber-400', color: 'text-amber-700 dark:text-amber-300', labelKey: 'itemStatusPreparing' },
   ready: { dot: 'bg-green-500 dark:bg-green-400', color: 'text-green-700 dark:text-green-300', labelKey: 'itemStatusReady' },
   served: { dot: 'bg-purple-500 dark:bg-purple-400', color: 'text-purple-700 dark:text-purple-300', labelKey: 'itemStatusServed' },
   cancelled: { dot: 'bg-red-400', color: 'text-red-500 dark:text-red-400', labelKey: 'itemStatusCancelled' },
@@ -64,7 +64,7 @@ const itemStatusConfig: Record<OrderItem['status'], { dot: string; color: string
 
 const orderStatusBadge: Record<Order['status'], { bg: string; text: string; labelKey: OrdersKey }> = {
   pending: { bg: 'bg-yellow-100 dark:bg-yellow-950/40', text: 'text-yellow-700 dark:text-yellow-300', labelKey: 'pending' },
-  preparing: { bg: 'bg-blue-100 dark:bg-blue-950/40', text: 'text-blue-700 dark:text-blue-300', labelKey: 'preparing' },
+  preparing: { bg: 'bg-amber-100 dark:bg-amber-950/40', text: 'text-amber-700 dark:text-amber-300', labelKey: 'preparing' },
   ready: { bg: 'bg-green-100 dark:bg-green-950/40', text: 'text-green-700 dark:text-green-300', labelKey: 'ready' },
   served: { bg: 'bg-purple-100 dark:bg-purple-950/40', text: 'text-purple-700 dark:text-purple-300', labelKey: 'served' },
   completed: { bg: 'bg-muted', text: 'text-muted-foreground', labelKey: 'completed' },
@@ -1019,13 +1019,13 @@ export default function OrdersPage() {
         ) : (
           <div className="flex-1 overflow-y-auto grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 content-start items-start auto-rows-max">
             {Object.values(heldOrdersStore.orders).map((heldOrder) => (
-              <div key={heldOrder.tableId} className="bg-card rounded-xl border border-blue-200 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow">
-                 <div className="p-4 border-b border-border bg-blue-50/50 flex justify-between items-center">
+              <div key={heldOrder.tableId} className="bg-card rounded-xl border border-amber-200 overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow">
+                 <div className="p-4 border-b border-border bg-amber-50/50 flex justify-between items-center">
                    <div>
                      <p className="font-bold text-foreground">{tables.find(t => t.id === heldOrder.tableId)?.name || tCommon('tableFallback')}</p>
                      <p className="text-xs text-muted-foreground">{formatTime(heldOrder.heldAt)}</p>
                    </div>
-                   <span className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-bold tracking-wide">{tOrders('held')}</span>
+                   <span className="bg-amber-100 text-amber-700 text-xs px-2 py-1 rounded-full font-bold tracking-wide">{tOrders('held')}</span>
                  </div>
                  <div className="p-4 flex-1">
                    {heldOrder.items.map((item, idx) => (
@@ -1160,17 +1160,17 @@ export default function OrdersPage() {
 
                 {/* Customer info strip */}
                 {order.customer ? (
-                  <div className="px-4 py-2 bg-blue-50 dark:bg-blue-950/40 border-b border-blue-100 dark:border-blue-800/40 flex items-center justify-between">
+                  <div className="px-4 py-2 bg-amber-50 dark:bg-amber-950/40 border-b border-amber-100 dark:border-amber-800/40 flex items-center justify-between">
                     <div className="flex items-center gap-2 min-w-0">
-                      <User size={14} className="text-blue-600 dark:text-blue-400 shrink-0" />
-                      <span className="text-sm font-medium text-blue-800 dark:text-blue-300 truncate">{order.customer.name}</span>
+                      <User size={14} className="text-amber-600 dark:text-amber-400 shrink-0" />
+                      <span className="text-sm font-medium text-amber-800 dark:text-amber-300 truncate">{order.customer.name}</span>
                       {order.customer.phone && (
-                        <span className="text-xs text-blue-600 dark:text-blue-400 shrink-0"><Ltr>{order.customer.phone}</Ltr></span>
+                        <span className="text-xs text-amber-600 dark:text-amber-400 shrink-0"><Ltr>{order.customer.phone}</Ltr></span>
                       )}
                     </div>
                     <button
                       onClick={() => handleCreateNewOrderForCustomer(order)}
-                      className="flex items-center gap-1 text-xs font-semibold text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-200 bg-blue-100 dark:bg-blue-950/40 hover:bg-blue-200 dark:hover:bg-blue-900/60 px-2.5 py-1 rounded-lg transition-colors shrink-0"
+                      className="flex items-center gap-1 text-xs font-semibold text-amber-700 dark:text-amber-300 hover:text-amber-900 dark:hover:text-amber-200 bg-amber-100 dark:bg-amber-950/40 hover:bg-amber-200 dark:hover:bg-amber-900/60 px-2.5 py-1 rounded-lg transition-colors shrink-0"
                       title={tOrders('startNewOrderForCustomer')}
                     >
                       <Plus size={12} /> {tOrders('newOrder')}
@@ -1188,7 +1188,7 @@ export default function OrdersPage() {
                             searchCustomersForLink(e.target.value);
                           }}
                           placeholder={tOrders('searchCustomer')}
-                          className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                          className="flex-1 px-3 py-1.5 text-sm border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none"
                           autoFocus
                         />
                         <button
@@ -1205,7 +1205,7 @@ export default function OrdersPage() {
                     ) : (
                       <button
                         onClick={() => setLinkCustomerOrderId(order.id)}
-                        className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-blue-600 transition-colors"
+                        className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-amber-600 transition-colors"
                       >
                         <UserPlus size={14} />
                         {tOrders('linkCustomer')}
@@ -1218,7 +1218,7 @@ export default function OrdersPage() {
                             key={customer.id}
                             onClick={() => handleLinkCustomer(order.id, String(customer.id))}
                             disabled={linkingCustomer}
-                            className="w-full flex items-center justify-between px-3 py-2 bg-card rounded-lg border border-border hover:border-blue-300 hover:bg-blue-50 transition-colors text-start disabled:opacity-50"
+                            className="w-full flex items-center justify-between px-3 py-2 bg-card rounded-lg border border-border hover:border-amber-300 hover:bg-amber-50 transition-colors text-start disabled:opacity-50"
                           >
                             <div>
                               <span className="text-sm font-medium text-foreground">{customer.name}</span>
@@ -1236,7 +1236,7 @@ export default function OrdersPage() {
                             setCreateCustomerOrderId(order.id);
                           }}
                           disabled={linkingCustomer}
-                          className="w-full flex items-center gap-1.5 px-3 py-2 text-sm text-blue-600 bg-card hover:bg-blue-50 rounded-lg border border-dashed border-blue-300 transition-colors font-medium text-start disabled:opacity-50 disabled:cursor-not-allowed"
+                          className="w-full flex items-center gap-1.5 px-3 py-2 text-sm text-amber-600 bg-card hover:bg-amber-50 rounded-lg border border-dashed border-amber-300 transition-colors font-medium text-start disabled:opacity-50 disabled:cursor-not-allowed"
                         >
                           <Plus size={15} />
                           {linkCustomerSearch.trim()
@@ -1428,7 +1428,7 @@ export default function OrdersPage() {
                         onClick={() => handleConvertToTakeaway(order)}
                         disabled={convertingOrderId === order.id}
                         size="sm"
-                        className="flex-1 justify-center border-blue-300 text-blue-600 hover:bg-blue-50 hover:text-blue-700"
+                        className="flex-1 justify-center border-amber-300 text-amber-600 hover:bg-amber-50 hover:text-amber-700"
                       >
                         <ShoppingBag size={14} className="me-1.5" />
                         {convertingOrderId === order.id ? tOrders('converting') : tOrders('convertToTakeaway')}

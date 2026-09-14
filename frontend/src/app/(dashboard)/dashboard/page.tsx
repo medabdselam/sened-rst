@@ -152,7 +152,7 @@ function formatWeekdayLabel(dayIndex: number, locale: string): string {
 
 const orderStatusColor: Record<string, string> = {
   pending: 'text-yellow-600 dark:text-yellow-400',
-  preparing: 'text-blue-600 dark:text-blue-400',
+  preparing: 'text-amber-600 dark:text-amber-400',
   ready: 'text-green-600 dark:text-green-400',
   served: 'text-purple-600 dark:text-purple-400',
   completed: 'text-muted-foreground',
@@ -280,8 +280,8 @@ export default function DashboardPage() {
           label: t('billsCollected'),
           value: financialSummary?.billCount ?? 0,
           icon: ReceiptText,
-          color: 'bg-blue-50 border-blue-200 dark:bg-blue-950/40 dark:border-blue-800/40',
-          iconColor: 'text-blue-600 dark:text-blue-400',
+          color: 'bg-amber-50 border-amber-200 dark:bg-amber-950/40 dark:border-amber-800/40',
+          iconColor: 'text-amber-600 dark:text-amber-400',
           href: '/orders',
         },
         {
@@ -299,8 +299,8 @@ export default function DashboardPage() {
           label: t('runningOrders'),
           value: stats?.runningOrders ?? 0,
           icon: ChefHat,
-          color: 'bg-blue-50 border-blue-200 dark:bg-blue-950/40 dark:border-blue-800/40',
-          iconColor: 'text-blue-600 dark:text-blue-400',
+          color: 'bg-amber-50 border-amber-200 dark:bg-amber-950/40 dark:border-amber-800/40',
+          iconColor: 'text-amber-600 dark:text-amber-400',
           href: '/orders',
         },
         {
@@ -337,8 +337,8 @@ export default function DashboardPage() {
           label: t('orders'),
           value: daySummary?.orders.count ?? 0,
           icon: ChefHat,
-          color: 'bg-blue-50 border-blue-200 dark:bg-blue-950/40 dark:border-blue-800/40',
-          iconColor: 'text-blue-600 dark:text-blue-400',
+          color: 'bg-amber-50 border-amber-200 dark:bg-amber-950/40 dark:border-amber-800/40',
+          iconColor: 'text-amber-600 dark:text-amber-400',
           href: '/orders',
         },
         {

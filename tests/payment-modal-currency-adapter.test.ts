@@ -610,12 +610,12 @@ function generatePaymentModalHtml(config: {
         ${config.payments.map((p) => `
         <div class="flex h-11">
           <button type="button" class="w-36 shrink-0 rounded-s-xl border px-3 flex items-center gap-2 text-sm font-semibold transition-colors ${
-            p.active ? 'bg-blue-600 text-white border-blue-600' : 'bg-gray-50 text-gray-700 border-gray-200'
+            p.active ? 'bg-amber-600 text-white border-amber-600' : 'bg-gray-50 text-gray-700 border-gray-200'
           }">
             <span>${p.icon}</span>
             <span class="truncate">${p.label}</span>
           </button>
-          <div class="flex flex-1 items-center border border-s-0 border-gray-200 rounded-e-xl bg-white focus-within:ring-2 focus-within:ring-blue-500">
+          <div class="flex flex-1 items-center border border-s-0 border-gray-200 rounded-e-xl bg-white focus-within:ring-2 focus-within:ring-amber-500">
             <span class="ps-3 text-gray-500 font-medium text-xs">${config.currencyLabel}</span>
             <input
               type="number"
@@ -665,7 +665,7 @@ function generatePaymentModalHtml(config: {
 
     <!-- Footer Button -->
     <div class="px-5 pb-5 border-t border-gray-100 pt-3">
-      <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-colors shadow-sm">
+      <button class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-4 rounded-xl text-sm transition-colors shadow-sm">
         ${config.totalPayButton}
       </button>
     </div>

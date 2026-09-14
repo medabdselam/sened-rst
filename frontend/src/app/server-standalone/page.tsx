@@ -1,4 +1,4 @@
-'use client';
+'use client';'
 
 import axios, { AxiosInstance } from 'axios';
 import toast from 'react-hot-toast';
@@ -55,7 +55,7 @@ function createApi(): AxiosInstance {
 function itemStatusIcon(status: string, t: (key: ServerAppKey) => string) {
   if (status === 'preparing') return <Flame size={15} className="text-orange-500" aria-label={t('statusPreparing')} />;
   if (status === 'ready') return <Bell size={15} className="text-emerald-600" aria-label={t('statusReady')} />;
-  if (status === 'served') return <CheckCircle2 size={15} className="text-blue-600" aria-label={t('statusServed')} />;
+  if (status === 'served') return <CheckCircle2 size={15} className="text-amber-600" aria-label={t('statusServed')} />;
   return <Circle size={15} className="text-gray-400" aria-label={t('statusWaiting')} />;
 }
 

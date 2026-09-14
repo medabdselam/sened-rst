@@ -49,7 +49,7 @@ const CATEGORY_COLORS: { key: string; labelKey: ProductsKey; bg: string; text: s
   { key: 'teal', labelKey: 'colorTeal', bg: 'bg-teal-100', text: 'text-teal-700' },
   { key: 'cyan', labelKey: 'colorCyan', bg: 'bg-cyan-100', text: 'text-cyan-700' },
   { key: 'sky', labelKey: 'colorSky', bg: 'bg-sky-100', text: 'text-sky-700' },
-  { key: 'blue', labelKey: 'colorBlue', bg: 'bg-blue-100', text: 'text-blue-700' },
+  { key: 'blue', labelKey: 'colorBlue', bg: 'bg-amber-100', text: 'text-amber-700' },
   { key: 'indigo', labelKey: 'colorIndigo', bg: 'bg-indigo-100', text: 'text-indigo-700' },
   { key: 'violet', labelKey: 'colorViolet', bg: 'bg-violet-100', text: 'text-violet-700' },
   { key: 'purple', labelKey: 'colorPurple', bg: 'bg-purple-100', text: 'text-purple-700' },

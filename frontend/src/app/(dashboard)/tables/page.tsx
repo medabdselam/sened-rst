@@ -21,7 +21,7 @@ const statusColors: Record<string, string> = {
   occupied: 'bg-red-500',
   reserved: 'bg-yellow-500',
   cleaning: 'bg-gray-500',
-  held: 'bg-blue-500',
+  held: 'bg-amber-500',
 };
 
 type OrdersKey = keyof AppConfig['Messages']['orders'];
@@ -120,10 +120,10 @@ function ReserveModal({ table, onClose, onDone }: ReserveModalProps) {
         {selected ? (
           <div className="flex items-center justify-between px-3 py-2.5 bg-brand-light dark:bg-[var(--color-brand-light)] rounded-xl mb-4">
             <div>
-              <p className="font-semibold text-brand dark:text-indigo-300 text-sm">{selected.name}</p>
-              <p className="text-xs text-brand/70 dark:text-indigo-300"><Ltr>{selected.phone}</Ltr></p>
+              <p className="font-semibold text-brand dark:text-amber-300 text-sm">{selected.name}</p>
+              <p className="text-xs text-brand/70 dark:text-amber-300"><Ltr>{selected.phone}</Ltr></p>
             </div>
-            <button onClick={() => setSelected(null)} className="text-brand dark:text-indigo-300 hover:text-brand-hover dark:hover:text-indigo-200">
+            <button onClick={() => setSelected(null)} className="text-brand dark:text-amber-300 hover:text-brand-hover dark:hover:text-amber-200">
               <X size={14} />
             </button>
           </div>
@@ -191,7 +191,7 @@ function ReserveModal({ table, onClose, onDone }: ReserveModalProps) {
 
 const itemStatusColors: Record<string, { bg: string; text: string; dot: string }> = {
   pending: { bg: 'bg-yellow-50', text: 'text-yellow-700', dot: 'bg-yellow-400' },
-  preparing: { bg: 'bg-blue-50', text: 'text-blue-700', dot: 'bg-blue-500' },
+  preparing: { bg: 'bg-amber-50', text: 'text-amber-700', dot: 'bg-amber-500' },
   ready: { bg: 'bg-green-50', text: 'text-green-700', dot: 'bg-green-500' },
   served: { bg: 'bg-purple-50', text: 'text-purple-700', dot: 'bg-purple-500' },
   cancelled: { bg: 'bg-red-50', text: 'text-red-500', dot: 'bg-red-400' },
@@ -515,7 +515,7 @@ export default function TablesPage() {
                           <span className="text-sm font-semibold text-foreground">#<Ltr>{order.order_number}</Ltr></span>
                           <span className={`text-xs px-2 py-0.5 rounded-full ${
                             order.status === 'pending' ? 'bg-yellow-100 text-yellow-700' :
-                            order.status === 'preparing' ? 'bg-blue-100 text-blue-700' :
+                            order.status === 'preparing' ? 'bg-amber-100 text-amber-700' :
                             order.status === 'ready' ? 'bg-green-100 text-green-700' :
                             order.status === 'served' ? 'bg-purple-100 text-purple-700' :
                             'bg-muted text-muted-foreground'

@@ -67,15 +67,15 @@ export function KdsItemModal({ item, orderNumber, updating, onClose, onUpdateSta
         </div>
 
         {item.addons && item.addons.length > 0 && (
-          <div className="bg-blue-50 rounded-xl p-3">
-            <p className="text-xs font-semibold text-blue-700 mb-1.5 uppercase tracking-wide">
+          <div className="bg-amber-50 rounded-xl p-3">
+            <p className="text-xs font-semibold text-amber-700 mb-1.5 uppercase tracking-wide">
               {t('addonsLabel')}
             </p>
             <div className="flex flex-wrap gap-1.5">
               {item.addons.map((addon, i) => (
                 <span
                   key={`${addon.id ?? addon.name}-${i}`}
-                  className="text-sm bg-card text-blue-700 px-2.5 py-1 rounded-lg border border-blue-200 font-medium"
+                  className="text-sm bg-card text-amber-700 px-2.5 py-1 rounded-lg border border-amber-200 font-medium"
                 >
                   + {addon.name}{(addon.quantity || 1) > 1 ? ` ×${addon.quantity}` : ''}
                 </span>

@@ -30,7 +30,7 @@ const TAG_CONFIG: Record<string, { color: string; bg: string; dot: string }> = {
   non_veg:       { color: 'text-red-700 dark:text-red-300',     bg: 'bg-red-100 dark:bg-red-950/40',     dot: 'bg-red-600 dark:bg-red-400' },
   spicy:         { color: 'text-orange-700 dark:text-orange-300',  bg: 'bg-orange-100 dark:bg-orange-950/40',  dot: 'bg-orange-500 dark:bg-orange-400' },
   contains_nuts: { color: 'text-amber-700 dark:text-amber-300',   bg: 'bg-amber-100 dark:bg-amber-950/40',   dot: 'bg-amber-500 dark:bg-amber-400' },
-  gluten_free:   { color: 'text-blue-700 dark:text-blue-300',    bg: 'bg-blue-100 dark:bg-blue-950/40',    dot: 'bg-blue-500 dark:bg-blue-400' },
+  gluten_free:   { color: 'text-amber-700 dark:text-amber-300',    bg: 'bg-amber-100 dark:bg-amber-950/40',    dot: 'bg-amber-500 dark:bg-amber-400' },
   dairy_free:    { color: 'text-sky-700 dark:text-sky-300',     bg: 'bg-sky-100 dark:bg-sky-950/40',     dot: 'bg-sky-500 dark:bg-sky-400' },
   // Retail / salon
   new_arrival:    { color: 'text-violet-700 dark:text-violet-300', bg: 'bg-violet-100 dark:bg-violet-950/40',  dot: 'bg-violet-500 dark:bg-violet-400' },

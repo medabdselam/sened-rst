@@ -33,7 +33,7 @@ export function KdsColumn({ status, count, children }: KdsColumnProps) {
       <div
         ref={ref}
         className={`flex-1 border-2 ${config.border} border-t-0 rounded-b-lg p-2 space-y-2 overflow-y-auto bg-muted/40 transition-colors ${
-          isDropTarget ? 'bg-blue-50 ring-2 ring-blue-300 ring-inset' : ''
+          isDropTarget ? 'bg-amber-50 ring-2 ring-amber-300 ring-inset' : ''
         }`}
         style={{ minHeight: '60vh', maxHeight: 'calc(100vh - 220px)' }}
       >

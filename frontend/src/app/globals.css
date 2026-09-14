@@ -376,7 +376,7 @@ div:hover > .flo-toast-drain,
 
   /* Brand surface for bg-brand-light in dark mode. Note: text-brand (#B88932)
    * has limited contrast on this surface; components using bg-brand-light with
-   * text-brand should add dark:text-indigo-300 for legibility. */
+   * text-brand should add dark:text-amber-300 for legibility. */
   --color-brand-light: oklch(0.22 0.04 85);
 }
 

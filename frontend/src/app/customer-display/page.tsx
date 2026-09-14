@@ -86,16 +86,16 @@ export default function CustomerDisplayPage() {
         <div className="max-w-7xl mx-auto text-center text-slate-400 py-20">Loading orders…</div>
       ) : (
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-          <section className="rounded-3xl bg-blue-950/60 border border-blue-900/70 overflow-hidden">
-            <div className="px-6 py-5 bg-blue-900/50 border-b border-blue-800/60">
+          <section className="rounded-3xl bg-amber-950/60 border border-amber-900/70 overflow-hidden">
+            <div className="px-6 py-5 bg-amber-900/50 border-b border-amber-800/60">
               <h1 className="text-2xl md:text-3xl font-extrabold tracking-wide">PREPARING</h1>
-              <p className="text-blue-200/70 mt-1">We are preparing your order</p>
+              <p className="text-amber-200/70 mt-1">We are preparing your order</p>
             </div>
             <div className="p-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
               {preparing.length === 0 ? (
                 <div className="col-span-full py-12 text-center text-slate-500 text-lg">No orders currently being prepared</div>
               ) : preparing.map((order) => (
-                <div key={order.id} className="rounded-2xl bg-slate-900/80 border border-blue-900/60 p-5 text-center">
+                <div key={order.id} className="rounded-2xl bg-slate-900/80 border border-amber-900/60 p-5 text-center">
                   <div className="text-xs uppercase tracking-widest text-slate-500 mb-2">Order</div>
                   <div className="text-3xl md:text-4xl font-black">{getCustomerOrderNumber(order)}</div>
                 </div>

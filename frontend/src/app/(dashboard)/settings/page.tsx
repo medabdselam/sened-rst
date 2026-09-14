@@ -3637,14 +3637,14 @@ export default function SettingsPage() {
                           </div>
                         ))}
                       </div>
-                      <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/40 rounded-lg p-4">
+                      <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/40 rounded-lg p-4">
                         <div className="flex items-start gap-3">
                           <div className="flex-1">
-                            <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-1">{t('appleDevices')}</p>
-                            <Ltr as="a" href={posInfo.mdns_url} target="_blank" rel="noopener noreferrer" className="block font-mono text-sm text-blue-600 dark:text-blue-400 break-all hover:underline">
+                            <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 uppercase tracking-wide mb-1">{t('appleDevices')}</p>
+                            <Ltr as="a" href={posInfo.mdns_url} target="_blank" rel="noopener noreferrer" className="block font-mono text-sm text-amber-600 dark:text-amber-400 break-all hover:underline">
                               {posInfo.mdns_url}
                             </Ltr>
-                            <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
+                            <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">
                               {t('appleDevicesHint')}
                             </p>
                           </div>
@@ -3771,14 +3771,14 @@ export default function SettingsPage() {
                           </div>
                         ))}
                       </div>
-                      <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/40 rounded-lg p-4">
+                      <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/40 rounded-lg p-4">
                         <div className="flex items-start gap-3">
                           <div className="flex-1">
-                            <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-1">{t('appleDevices')}</p>
-                            <Ltr as="a" href={kdsInfo.mdns_url} target="_blank" rel="noopener noreferrer" className="block font-mono text-sm text-blue-600 dark:text-blue-400 break-all hover:underline">
+                            <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 uppercase tracking-wide mb-1">{t('appleDevices')}</p>
+                            <Ltr as="a" href={kdsInfo.mdns_url} target="_blank" rel="noopener noreferrer" className="block font-mono text-sm text-amber-600 dark:text-amber-400 break-all hover:underline">
                               {kdsInfo.mdns_url}
                             </Ltr>
-                            <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">
+                            <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">
                               {t('appleDevicesHint')}
                             </p>
                           </div>
@@ -3967,7 +3967,7 @@ export default function SettingsPage() {
 
             <KdsDefaultViewCard />
 
-            <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/40 rounded-xl p-4 text-sm text-blue-800 dark:text-blue-300">
+            <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/40 rounded-xl p-4 text-sm text-amber-800 dark:text-amber-300">
               <strong>{t('howItWorks')}</strong> {t('howItWorksBody')}
             </div>
           </div>
@@ -4046,12 +4046,12 @@ export default function SettingsPage() {
                             </div>
                           ))}
                         </div>
-                        <div className="bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/40 rounded-lg p-4">
-                          <p className="text-xs font-semibold text-blue-700 dark:text-blue-300 uppercase tracking-wide mb-1">{t('appleDevices')}</p>
-                          <Ltr as="a" href={serverAppInfo.mdns_url} target="_blank" rel="noopener noreferrer" className="block font-mono text-sm text-blue-600 dark:text-blue-400 break-all hover:underline">
+                        <div className="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/40 rounded-lg p-4">
+                          <p className="text-xs font-semibold text-amber-700 dark:text-amber-300 uppercase tracking-wide mb-1">{t('appleDevices')}</p>
+                          <Ltr as="a" href={serverAppInfo.mdns_url} target="_blank" rel="noopener noreferrer" className="block font-mono text-sm text-amber-600 dark:text-amber-400 break-all hover:underline">
                             {serverAppInfo.mdns_url}
                           </Ltr>
-                          <p className="text-xs text-blue-600 dark:text-blue-400 mt-2">{t('appleDevicesHint')}</p>
+                          <p className="text-xs text-amber-600 dark:text-amber-400 mt-2">{t('appleDevicesHint')}</p>
                         </div>
                       </>
                     ) : (
@@ -4529,7 +4529,7 @@ export default function SettingsPage() {
                   <div key={p.id} className={`flex items-center gap-3 rounded-xl border p-4 ${p.is_default ? 'border-brand bg-brand/5' : 'border-border'}`}>
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-muted shrink-0">
                       {p.connection_type === 'network' ? <Wifi size={18} className="text-muted-foreground" /> :
-                       p.connection_type === 'webusb' ? <Usb size={18} className="text-blue-500" /> :
+                       p.connection_type === 'webusb' ? <Usb size={18} className="text-amber-500" /> :
                        <Usb size={18} className="text-muted-foreground" />}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -4623,7 +4623,7 @@ export default function SettingsPage() {
                     </>)}
 
                     {printerForm.connection_type === 'webusb' && (
-                      <div className="md:col-span-2 bg-blue-50 dark:bg-blue-950/40 rounded-lg p-3 text-sm text-blue-700 dark:text-blue-300">
+                      <div className="md:col-span-2 bg-amber-50 dark:bg-amber-950/40 rounded-lg p-3 text-sm text-amber-700 dark:text-amber-300">
                         {t('webusbHint')}
                       </div>
                     )}
@@ -5015,9 +5015,9 @@ export default function SettingsPage() {
             </div>
 
             {/* Database Backup */}
-            <div className="bg-card rounded-xl border border-blue-100 bg-blue-50/30 p-6">
+            <div className="bg-card rounded-xl border border-amber-100 bg-amber-50/30 p-6">
               <div className="flex items-center gap-2 mb-4">
-                <Database size={20} className="text-blue-600" />
+                <Database size={20} className="text-amber-600" />
                 <h2 className="font-semibold text-foreground">{t('createBackup')}</h2>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
@@ -5075,7 +5075,7 @@ export default function SettingsPage() {
                             </span>
                           )}
                           {googleDriveStatus.last_backup_filename === backup.fileName && (
-                            <span className="flex items-center gap-1 text-xs px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-100">
+                            <span className="flex items-center gap-1 text-xs px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-100">
                               <HardDrive size={11} />
                               {t('googleDriveUploadedBadge')}
                             </span>

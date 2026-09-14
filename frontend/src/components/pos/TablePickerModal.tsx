@@ -24,7 +24,7 @@ const statusStyles: Record<string, { border: string; badge: string; badgeKey: Po
   occupied: { border: 'border-orange-300 dark:border-orange-800/40 bg-orange-50 dark:bg-orange-950/40', badge: 'bg-orange-500', badgeKey: 'tableOccupied' },
   reserved: { border: 'border-yellow-300 dark:border-yellow-800/40 bg-yellow-50 dark:bg-yellow-950/40', badge: 'bg-yellow-500', badgeKey: 'tableReserved' },
   cleaning: { border: 'border-gray-300 dark:border-border bg-muted', badge: 'bg-gray-500', badgeKey: 'tableCleaning' },
-  held: { border: 'border-blue-400 dark:border-blue-800/40 bg-blue-50 dark:bg-blue-950/40', badge: 'bg-blue-500', badgeKey: 'tableHeld' },
+  held: { border: 'border-amber-400 dark:border-amber-800/40 bg-amber-50 dark:bg-amber-950/40', badge: 'bg-amber-500', badgeKey: 'tableHeld' },
 };
 
 export default function TablePickerModal({
@@ -77,12 +77,12 @@ export default function TablePickerModal({
                   isSelected
                     ? 'border-brand bg-brand-light'
                     : isHeld
-                      ? 'border-blue-400 bg-blue-50'
+                      ? 'border-amber-400 bg-amber-50'
                       : style.border
                 } ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
               >
                 {isHeld && (
-                  <span className="absolute -top-2 -end-2 bg-blue-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
+                  <span className="absolute -top-2 -end-2 bg-amber-500 text-white text-[10px] px-1.5 py-0.5 rounded-full font-bold">
                     {t('tableHeld')}
                   </span>
                 )}

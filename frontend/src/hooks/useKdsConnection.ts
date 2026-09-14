@@ -38,10 +38,10 @@ export const STATUS_CONFIG = {
   },
   preparing: {
     labelKey: 'statusPreparing',
-    color: 'bg-blue-500',
-    border: 'border-blue-300 dark:border-blue-700',
-    text: 'text-blue-700 dark:text-blue-300',
-    bg: 'bg-blue-50 dark:bg-blue-950/60',
+    color: 'bg-amber-500',
+    border: 'border-amber-300 dark:border-amber-700',
+    text: 'text-amber-700 dark:text-amber-300',
+    bg: 'bg-amber-50 dark:bg-amber-950/60',
   },
   ready: {
     labelKey: 'statusReady',
@@ -75,7 +75,7 @@ export function normalizeKitchenStatus(status: unknown): KitchenStatus {
 }
 
 export const ORDER_TYPE_BADGE_STYLES: Record<string, string> = {
-  dine_in: 'bg-blue-50 text-blue-700 border-blue-200',
+  dine_in: 'bg-amber-50 text-amber-700 border-amber-200',
   takeaway: 'bg-orange-50 text-orange-700 border-orange-200',
   delivery: 'bg-purple-50 text-purple-700 border-purple-200',
   online: 'bg-teal-50 text-teal-700 border-teal-200',

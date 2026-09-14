@@ -20,7 +20,7 @@ type StaffKey = keyof AppConfig['Messages']['staff'];
 const roleColors: Record<string, string> = {
   owner: 'bg-red-100 text-red-800',
   manager: 'bg-purple-100 text-purple-800',
-  cashier: 'bg-blue-100 text-blue-800',
+  cashier: 'bg-amber-100 text-amber-800',
   server: 'bg-green-100 text-green-800',
   chef: 'bg-orange-100 text-orange-800',
 };

@@ -253,7 +253,7 @@ function KanbanOrderCard({
                 <span className={`text-base font-bold w-6 shrink-0 ${config.text}`}>{item.quantity}×</span>
                 <span className="text-lg text-foreground font-medium flex-1 truncate">{item.product_name}</span>
                 {item.addons && item.addons.length > 0 && (
-                  <span className="text-[10px] text-blue-600">+{item.addons.length}</span>
+                  <span className="text-[10px] text-amber-600">+{item.addons.length}</span>
                 )}
               </div>
               {item.special_instructions && (
