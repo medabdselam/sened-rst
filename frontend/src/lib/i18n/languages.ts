@@ -12,6 +12,13 @@ export interface LanguageConfig {
 /** Single source of truth for supported UI languages, BCP-47 locale tags,
  * display names, directions, and dynamic chunk loaders. */
 export const LANGUAGES = {
+  ar: {
+    locale: 'ar-u-nu-latn',
+    nativeName: 'العربية',
+    direction: 'rtl',
+    selectable: true,
+    load: () => import('./messages/ar.json'),
+  },
   en: {
     locale: 'en',
     nativeName: 'English',

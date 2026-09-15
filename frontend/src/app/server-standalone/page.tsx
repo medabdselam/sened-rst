@@ -1,4 +1,4 @@
-'use client';'
+'use client';
 
 import axios, { AxiosInstance } from 'axios';
 import toast from 'react-hot-toast';
